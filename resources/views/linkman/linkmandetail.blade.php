@@ -1,0 +1,79 @@
+@extends('layouts.app')
+@section('title', 'layui后台大布局')
+@section('sidebar')
+ @parent
+@endsection
+@section('content')
+<div style="padding: 30px">
+<table border="1">
+	<tr>
+		<td>id</td>
+		<td>{{$data->l_id}}</td>
+	</tr>
+	<tr>
+		<td>客户单位</td>
+		<td>{{$data->l_unit}}</td>
+	</tr>
+	<tr>
+		<td>联系人职位</td>
+		<td>{{$data->l_position}}</td>
+	</tr>
+	<tr>
+		<td>姓名</td>
+		<td>{{$data->l_name}}</td>
+	</tr>
+	<tr>
+		<td>性别</td>
+		<td>
+			@if($data->l_sex==1)
+				男
+			@else
+				女
+			@endif
+		</td>
+	</tr>
+	<tr>
+		<td>生日</td>
+		<td>{{$data->l_birthday}}</td>
+	</tr>
+	<tr>
+		<td>爱好</td>
+		<td>{{$data->l_hover}}</td>
+	</tr>
+	<tr>
+		<td>家庭邮编</td>
+		<td>{{$data->home_code}}</td>
+	</tr>
+
+	<tr>
+		<td>家庭住址</td>
+		<td>{{$data->home_address}}</td>
+	</tr><tr>
+		<td>工作电话</td>
+		<td>{{$data->work_tel}}</td>
+	</tr>
+	<tr>
+		<td>家庭电话</td>
+		<td>{{$data->home_tel}}</td>
+	</tr>
+	<tr>
+		<td>手机</td>
+		<td>{{$data->phone}}</td>
+	</tr>
+	<tr>
+		<td>email</td>
+		<td>{{$data->l_email}}</td>
+	</tr>
+	<tr>
+		<td>qq号码</td>
+		<td>{{$data->qq_code}}</td>
+	</tr>
+	<tr>
+		<td>备注</td>
+		<td>{{$data->l_remark}}</td>
+	</tr>
+
+</table>
+<a href="javascript:history.back(-1)">返回上一级</a>
+</div>
+@endsection
